@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let a = 44;
+        let b = 'this is deepa'
+        console.log(a,b);
+
+        function hey(){
+            console.log("Hey js")
+        }
+        let obj = {
+            r: 34,
+            m: 64,
+            func: function myfunc(number){
+                 console.log("The number is "+number);
+            }
+        }
+
+        document.addEventListener("click", function click(){
+            console.log("Clicked");
+            //alert("Hello")
+            let conf = confirm("Are you sure");
+            console.log(conf);
+        })
+        let arr = [22,12,41,25]
+        for (let index=0 ; index<arr.length;index++){
+            console.log(arr)
+            const element = arr[index];
+        }
+        
+        func: function myfunc(number){
+            //console.log("The number is "+number);
+            console.log("The number is "+this);
+       }
+       myfunc();
+       // this gives object window 
+       //arrow function mai this object window banta h or normal function mai this undefined value hoti hai 
+       // bhar k object ko  refer kar deta hai 
+       let mobj = {
+        a: this,
+         myfunct : (number)=>{
+            console.log("The number is "+ this);
+           }
+       }
+       mobj.myfunct();
+       console.log(mobj)
+      // let mobj = {
+      //  a: this,
+      //   myfunct : function(number){
+       //     console.log("The number is "+ this);
+      //     }
+     //  }
+     //  mobj.myfunct();
+     //  console.log(mobj.a)
+
+     setTimeout(()=>{
+        console.log("yayy")
+     },3000);
+     console.log("script below the timeout")
+    </script>
+</head>
+<body>
+    <h1>I AM LEARNING JS</h1>
+    <!-- data-types:
+    numbers , booleans ,string,undefined, null -->
+</body>
+</html>
